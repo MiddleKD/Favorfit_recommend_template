@@ -28,7 +28,6 @@ def load_colors_540():
     file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), relative_path)
 
     list_of_colors = []
-    print(file_path)
 
     with open(file_path, "r") as file:
         lines = file.readlines()
