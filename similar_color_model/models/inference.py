@@ -2,7 +2,7 @@ import numpy as np
 import json
 import os
 from models.model import forward
-from utils.colors_utils import color_normalization, color_normalization_restore
+from ..utils.colors_utils import color_normalization, color_normalization_restore
 
 # JSON 파일에서 모델 가중치 로드
 relative_path = '202311162115.json'
