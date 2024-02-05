@@ -29,7 +29,7 @@ def inference(img_pil, mask_pil, resize_shape=[128,128]):
         probabilities_540, list_of_colors
     )
 
-    return colors.tolist(), weights.tolist()
+    return colors.tolist(), weights.tolist()[0]
 
 if __name__ == "__main__":
     import sys, os

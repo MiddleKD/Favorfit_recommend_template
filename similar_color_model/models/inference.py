@@ -42,5 +42,5 @@ def run(colors_weights_pair):
     
     colors, percentage = to_color_percentage(out)
     restored_colors = color_normalization_restore(colors, scaling=True, type="rgb")
-    
-    return np.clip(restored_colors, 0, 255), np.clip(percentage, 0, 1)
+
+    return np.clip(restored_colors[0], 0, 255), np.clip(percentage[0], 0, 1)
