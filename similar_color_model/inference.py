@@ -13,7 +13,7 @@ def inference(img_pil, mask_pil, resize_shape=[128,128]):
     colors_weights_pair = color_extraction(image_np, mask_np, n_cluster=4, epochs=5)
     colors, weights = run(colors_weights_pair)
 
-    return colors.astype(np.uint8), weights
+    return colors.astype(np.uint8).tolist(), weights.tolist()
 
 if __name__ == "__main__":
     from PIL import Image
