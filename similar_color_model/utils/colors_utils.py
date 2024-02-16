@@ -173,34 +173,6 @@ def visualize_hsv_colors(hsv_colors, norm_type=None):
     plt.show()
 
 
-from sklearn.decomposition import PCA
-
-def plot_3D_PCA(data, labels=None, label_names=None):
-    
-    pca = PCA(n_components=3)
-    reduced_data = pca.fit_transform(data)
-
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-
-    unique_labels = np.unique(labels)
-    
-    for label in unique_labels:
-        indices = np.where(labels == label)
-        ax.scatter(reduced_data[indices, 0], reduced_data[indices, 1], reduced_data[indices, 2], 
-                   label=label_names[label] if label_names else f'Label {label}')
-
-    ax.set_title('3D PCA')
-    ax.set_xlabel('PC1')
-    ax.set_ylabel('PC2')
-    ax.set_zlabel('PC3')
-
-    # Adding the legend
-    ax.legend(loc='upper right')
-
-    plt.show()
-
-
 
 # clustering kmeans
 def img_none_flatten(img, mask):
